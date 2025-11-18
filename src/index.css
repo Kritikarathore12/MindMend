@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* MindMend Theme - Ocean Blue & Teal Wellness */
+    --background: 195 100% 98%; /* Soft blue-white with teal hint */
+    --foreground: 200 30% 12%; /* Deep ocean navy */
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 30% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 30% 12%;
+
+    --primary: 195 85% 52%; /* Ocean blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 175 65% 55%; /* Teal accent */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 195 40% 96%;
+    --muted-foreground: 200 20% 50%;
+
+    --accent: 180 90% 48%; /* Bright turquoise */
+    --accent-foreground: 0 0% 100%;
+
+    --tertiary: 210 85% 60%; /* Sky blue */
+    --tertiary-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 195 30% 90%;
+    --input: 195 30% 92%;
+    --ring: 195 85% 52%;
+
+    --radius: 0.75rem;
+
+    /* Sentiment colors for journal feedback */
+    --sentiment-positive: 142 70% 55%; /* Fresh green */
+    --sentiment-negative: 0 75% 65%; /* Soft red */
+    --sentiment-neutral: 195 25% 70%; /* Neutral blue-gray */
+
+    /* Enhanced gradient definitions with blue-teal spectrum */
+    --gradient-hero: linear-gradient(135deg, hsl(195, 85%, 52%) 0%, hsl(180, 90%, 48%) 40%, hsl(175, 65%, 55%) 100%);
+    --gradient-nav: linear-gradient(90deg, hsl(200, 50%, 58%) 0%, hsl(210, 45%, 62%) 50%, hsl(195, 40%, 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(195, 70%, 97%) 100%);
+    --gradient-accent: linear-gradient(120deg, hsl(195, 85%, 52%), hsl(180, 90%, 48%));
+    --gradient-teal: linear-gradient(135deg, hsl(175, 65%, 55%), hsl(180, 90%, 48%));
+    --gradient-ocean: linear-gradient(180deg, hsl(195, 85%, 52%) 0%, hsl(200, 80%, 45%) 100%);
+    
+    /* Shadows with blue-teal tint */
+    --shadow-soft: 0 4px 24px -4px hsl(195 85% 52% / 0.12);
+    --shadow-hover: 0 12px 40px -8px hsl(195 85% 52% / 0.2);
+    --shadow-glow: 0 0 32px hsl(180 90% 48% / 0.3);
+    --shadow-teal: 0 8px 32px -4px hsl(175 65% 55% / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Deep ocean dark mode */
+    --background: 200 45% 8%;
+    --foreground: 195 40% 92%;
+
+    --card: 200 40% 12%;
+    --card-foreground: 195 40% 92%;
+
+    --popover: 200 40% 12%;
+    --popover-foreground: 195 40% 92%;
+
+    --primary: 195 85% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 175 65% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 200 30% 18%;
+    --muted-foreground: 195 30% 65%;
+
+    --accent: 180 90% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --tertiary: 210 85% 55%;
+    --tertiary-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 30% 20%;
+    --input: 200 30% 20%;
+    --ring: 195 85% 52%;
+
+    --sentiment-positive: 142 60% 50%;
+    --sentiment-negative: 0 70% 55%;
+    --sentiment-neutral: 200 25% 40%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(200, 45%, 10%) 0%, hsl(195, 40%, 15%) 50%, hsl(180, 35%, 20%) 100%);
+    --gradient-nav: linear-gradient(90deg, hsl(200, 40%, 25%) 0%, hsl(210, 35%, 28%) 50%, hsl(195, 30%, 26%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(200, 40%, 12%) 0%, hsl(195, 35%, 16%) 100%);
+    --gradient-accent: linear-gradient(120deg, hsl(195, 85%, 52%), hsl(180, 90%, 48%));
+    --gradient-teal: linear-gradient(135deg, hsl(175, 65%, 50%), hsl(180, 90%, 45%));
+    --gradient-ocean: linear-gradient(180deg, hsl(195, 85%, 52%) 0%, hsl(200, 80%, 40%) 100%);
+    
+    --shadow-soft: 0 4px 24px -4px hsl(0 0% 0% / 0.5);
+    --shadow-hover: 0 12px 40px -8px hsl(195 85% 52% / 0.3);
+    --shadow-glow: 0 0 32px hsl(180 90% 48% / 0.4);
+    --shadow-teal: 0 8px 32px -4px hsl(175 65% 50% / 0.3);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities for Framer Motion fallbacks */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Custom shadow utilities */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Gradient text utility */
+  .gradient-text {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
