@@ -1,6 +1,6 @@
 # MindMend - AI-Powered Mental Health & Wellness Platform
 
-Link - https://mind-mend-one.vercel.app/
+Deployed Link - https://mind-mend-one.vercel.app/
 
 > **Final Year Major Project**  
 > Developed by **Kritika Rathore**, **Kishika Chouhan**, **Ena Luhadia Jain** and **Kshipra Navin**
